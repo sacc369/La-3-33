@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tienda 3-33</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="age-modal" class="modal">
+        <div class="modal-content">
+            <h2>¿Eres mayor de 18 años?</h2>
+            <button onclick="ageVerification(true)">Sí</button>
+            <button onclick="ageVerification(false)">No</button>
+        </div>
+    </div>
+
+    <div class="container" id="content">
+        <h1>La Tienda 3-33</h1>
+        
+        <section class="category">
+            <h2>Suero Electrolit</h2>
+            <div class="products-grid">
+                <div class="product" data-id="electrolit-maracuya">
+                    <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400" alt="Electrolit Maracuyá">
+                    <h3>Electrolit Maracuyá 625ml</h3>
+                    <p class="price">$7,140</p>
+                    <button onclick="addToCart('electrolit-maracuya', 'Electrolit Maracuyá 625ml', 7140)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="electrolit-limon">
+                    <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400" alt="Electrolit Limón">
+                    <h3>Electrolit Limón 625ml</h3>
+                    <p class="price">$7,140</p>
+                    <button onclick="addToCart('electrolit-limon', 'Electrolit Limón 625ml', 7140)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="electrolit-naranja">
+                    <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400" alt="Electrolit Naranja">
+                    <h3>Electrolit Naranja 625ml</h3>
+                    <p class="price">$7,140</p>
+                    <button onclick="addToCart('electrolit-naranja', 'Electrolit Naranja 625ml', 7140)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Gaseosas Coca-Cola</h2>
+            <div class="products-grid">
+                <div class="product" data-id="coca-cola-1-5l">
+                    <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400" alt="Coca-Cola 1.5L">
+                    <h3>Coca-Cola Original 1.5L</h3>
+                    <p class="price">$6,010</p>
+                    <button onclick="addToCart('coca-cola-1-5l', 'Coca-Cola Original 1.5L', 6010)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="coca-cola-zero-300ml">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" alt="Coca-Cola Zero">
+                    <h3>Coca-Cola Zero 300ml</h3>
+                    <p class="price">$3,100</p>
+                    <button onclick="addToCart('coca-cola-zero-300ml', 'Coca-Cola Zero 300ml', 3100)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Gaseosas Postobón</h2>
+            <div class="products-grid">
+                <div class="product" data-id="postobon-manzana">
+                    <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400" alt="Postobón Manzana">
+                    <h3>Postobón Manzana 400ml</h3>
+                    <p class="price">$2,000</p>
+                    <button onclick="addToCart('postobon-manzana', 'Postobón Manzana 400ml', 2000)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="postobon-uva">
+                    <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400" alt="Postobón Uva">
+                    <h3>Postobón Uva 400ml</h3>
+                    <p class="price">$2,000</p>
+                    <button onclick="addToCart('postobon-uva', 'Postobón Uva 400ml', 2000)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="hipinto">
+                    <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400" alt="Hipinto">
+                    <h3>Hipinto 1.5L</h3>
+                    <p class="price">$3,700</p>
+                    <button onclick="addToCart('hipinto', 'Hipinto 1.5L', 3700)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Aguas</h2>
+            <div class="products-grid">
+                <div class="product" data-id="brisa-gas">
+                    <img src="https://images.unsplash.com/photo-1587703955694-5adb04b1e472?w=400" alt="Brisa con Gas">
+                    <h3>Brisa con Gas 600ml</h3>
+                    <p class="price">$1,360</p>
+                    <button onclick="addToCart('brisa-gas', 'Brisa con Gas 600ml', 1360)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="cristal-gas">
+                    <img src="https://images.unsplash.com/photo-1587703955694-5adb04b1e472?w=400" alt="Cristal con Gas">
+                    <h3>Cristal con Gas 600ml</h3>
+                    <p class="price">$1,512</p>
+                    <button onclick="addToCart('cristal-gas', 'Cristal con Gas 600ml', 1512)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="cristal-natural-pack">
+                    <img src="https://images.unsplash.com/photo-1587703955694-5adb04b1e472?w=400" alt="Cristal Natural Pack">
+                    <h3>Cristal Agua Natural 300ml x24</h3>
+                    <p class="price">$14,792</p>
+                    <button onclick="addToCart('cristal-natural-pack', 'Cristal Agua Natural 300ml x24', 14792)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="cristal-natural-small">
+                    <img src="https://images.unsplash.com/photo-1587703955694-5adb04b1e472?w=400" alt="Cristal Natural Pequeña">
+                    <h3>Cristal Agua Natural Pequeña</h3>
+                    <p class="price">$800</p>
+                    <button onclick="addToCart('cristal-natural-small', 'Cristal Agua Natural Pequeña', 800)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Cervezas</h2>
+            <div class="products-grid">
+                <div class="product" data-id="heineken">
+                    <img src="https://images.unsplash.com/photo-1618885472179-5e474019f2a9?w=400" alt="Heineken">
+                    <h3>Heineken Botella 330ml</h3>
+                    <p class="price">$4,000</p>
+                    <button onclick="addToCart('heineken', 'Heineken Botella 330ml', 4000)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="club-colombia">
+                    <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400" alt="Club Colombia">
+                    <h3>Club Colombia Botella 330ml</h3>
+                    <p class="price">$3,500</p>
+                    <button onclick="addToCart('club-colombia', 'Club Colombia Botella 330ml', 3500)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="coronita-pack">
+                    <img src="https://images.unsplash.com/photo-1619451683204-a4edf783d154?w=400" alt="Coronita Extra Pack">
+                    <h3>Coronita Extra x6 (210ml c/u)</h3>
+                    <p class="price">$17,900</p>
+                    <button onclick="addToCart('coronita-pack', 'Coronita Extra x6 (210ml c/u)', 17900)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="poker">
+                    <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400" alt="Poker">
+                    <h3>Poker Botella 330ml</h3>
+                    <p class="price">$3,500</p>
+                    <button onclick="addToCart('poker', 'Poker Botella 330ml', 3500)">Agregar al Carrito</button>
+                </div>
+                <div class="product" data-id="aguila-light">
+                    <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400" alt="Águila Light">
+                    <h3>Águila Light Botella 330ml</h3>
+                    <p class="price">$3,500</p>
+                    <button onclick="addToCart('aguila-light', 'Águila Light Botella 330ml', 3500)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="cart">
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary">
+                <label class="delivery-option">
+                    <input type="checkbox" id="delivery-checkbox" onchange="updateTotal()">
+                    Quiero envío a mi dirección (+$3,500)
+                </label>
+                <div id="address-container" class="address-container hidden">
+                    <label for="delivery-address">Dirección:</label>
+                    <input type="text" id="delivery-address" placeholder="Escribe tu dirección">
+                </div>
+                <div class="contact-info">
+                    <label for="phone-number">Teléfono:</label>
+                    <input type="tel" id="phone-number" placeholder="Escribe tu teléfono">
+                </div>
+                <div class="payment-methods">
+                    <h3>Método de pago:</h3>
+                    <label>
+                        <input type="radio" name="payment-method" value="Nequi">
+                        Nequi
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="Efectivo">
+                        Efectivo
+                    </label>
+                </div>
+                <p id="total-price" class="total">Total: $0</p>
+                <button id="purchase-button" onclick="finalizePurchase()" class="purchase-button">
+                    Finalizar compra
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
